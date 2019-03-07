@@ -16,7 +16,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-function wpb_remove_commentsip( $comment_author_ip ) {
-	return '';
-}
-add_filter( 'pre_comment_user_ip', 'wpb_remove_commentsip' );
+
+require_once plugin_dir_path( __FILE__ ) . 'src/init.php';
